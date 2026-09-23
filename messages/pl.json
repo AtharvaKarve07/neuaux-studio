@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "title": "neuaux.studio | Studio foto i wideo w Warszawie",
+    "description": "Studio foto i wideo w Warszawie. Nieruchomości, wydarzenia, portrety, jedzenie, ulica i sesje kreatywne, gotowe w około 48-72 godziny.",
+    "template": "%s | neuaux.studio",
+    "pages": {
+      "work": "Realizacje",
+      "services": "Usługi",
+      "about": "O nas",
+      "contact": "Umów rozmowę"
+    }
+  },
+  "nav": {
+    "label": "Nawigacja główna",
+    "home": "neuaux.studio, strona główna",
+    "work": "Realizacje",
+    "services": "Usługi",
+    "about": "O nas",
+    "contact": "Kontakt",
+    "book": "Umów rozmowę",
+    "menu": "Menu",
+    "closeMenu": "Zamknij",
+    "menuLabel": "Menu strony",
+    "language": "Język",
+    "skip": "Przejdź do treści"
+  },
+  "lang": {
+    "en": "English",
+    "pl": "Polski",
+    "uk": "Українська"
+  },
+  "categories": {
+    "realEstate": "Nieruchomości",
+    "events": "Wydarzenia",
+    "portraits": "Portrety",
+    "creative": "Kreatywne",
+    "food": "Jedzenie",
+    "street": "Ulica"
+  },
+  "kinds": {
+    "photo": "Zdjęcia",
+    "video": "Wideo"
+  },
+  "home": {
+    "hero": {
+      "title": "Zdjęcia i wideo dla marek, które chcą być zauważone.",
+      "text": "Fotografujemy i filmujemy nieruchomości, wydarzenia, portrety, jedzenie i ulicę, efekt w 48-72 godziny.",
+      "seeWork": "Zobacz realizacje"
+    },
+    "work": {
+      "title": "Ostatnie realizacje"
+    },
+    "services": {
+      "title": "Co robimy",
+      "video": {
+        "title": "Produkcja wideo",
+        "text": "Krótkie rolki, relacje z wydarzeń, spacery po nieruchomościach i filmy kulinarne. Nagrane, zmontowane i gotowe do publikacji."
+      },
+      "photo": {
+        "title": "Fotografia",
+        "text": "Portrety, wnętrza, wydarzenia, dania i ulica. Obrobione i z korekcją barwną do internetu i druku."
+      },
+      "more": "Jak pracujemy"
+    },
+    "cta": {
+      "title": "Powiedz nam, czego potrzebujesz.",
+      "text": "Opisz sesję, budżet i kiedy masz czas. Odpiszemy z terminem rozmowy."
+    }
+  },
+  "work": {
+    "title": "Realizacje",
+    "text": "Zdjęcia i wideo z ostatnich zleceń."
+  },
+  "viewer": {
+    "label": "Podgląd realizacji",
+    "open": "Otwórz: {title}",
+    "close": "Zamknij",
+    "previous": "Poprzednie",
+    "next": "Następne",
+    "play": "Odtwórz wideo",
+    "pause": "Wstrzymaj wideo",
+    "mute": "Wycisz",
+    "unmute": "Włącz dźwięk",
+    "seek": "Pozycja wideo",
+    "sample": "Przykładowy obraz. Zastąp go własną realizacją.",
+    "titles": {
+      "re-01": "Salon w popołudniowym świetle",
+      "ev-01": "Tłum w świetle scenicznym",
+      "pt-01": "Portret na tle ciemnej ściany",
+      "cr-01": "Studium kształtów",
+      "fd-01": "Danie z góry",
+      "st-01": "Pusta ulica nocą",
+      "re-02": "Spacer po mieszkaniu",
+      "pt-02": "Portret w świetle okna",
+      "ev-02": "Sala wydarzenia, szeroki kadr",
+      "fd-02": "Okno wydawcze w kuchni",
+      "cr-02": "Wycięcie i kolor",
+      "st-02": "Przejście o zmierzchu"
+    }
+  },
+  "services": {
+    "title": "Usługi",
+    "text": "Dwa rzemiosła, mały zespół. Powiedz nam, jakie jest zlecenie, a resztę zaplanujemy.",
+    "video": {
+      "title": "Produkcja wideo",
+      "text": "Krótkie rolki, relacje z wydarzeń, spacery po nieruchomościach i filmy kulinarne. Kręcimy, montujemy i przekazujemy pliki gotowe do publikacji."
+    },
+    "photo": {
+      "title": "Fotografia",
+      "text": "Portrety, wnętrza, wydarzenia, dania i zdjęcia uliczne. Obrobione, z korekcją barwną, w rozmiarach do internetu i druku."
+    },
+    "jobsTitle": "Co fotografujemy i filmujemy",
+    "jobs": {
+      "realEstate": "Wnętrza, zewnętrza i wideo z prezentacją, które pokazują nieruchomość z najlepszej strony.",
+      "events": "Foto i wideo od pierwszego do ostatniego gościa.",
+      "portraits": "Portrety osobiste, założycieli i zespołów, w plenerze.",
+      "creative": "Sesje koncepcyjne dla marek i osób z wizją.",
+      "food": "Menu, dania i kuchnie, dla restauracji i dowozu.",
+      "street": "Miejskie kadry z uwagą na światło i ruch."
+    },
+    "processTitle": "Jak przebiega zlecenie",
+    "process": {
+      "brief": {
+        "title": "Brief",
+        "text": "Mówisz nam, czego potrzebujesz, gdzie to wykorzystasz i na kiedy."
+      },
+      "plan": {
+        "title": "Plan",
+        "text": "Ustalamy ujęcia, miejsce i harmonogram przed dniem zdjęciowym."
+      },
+      "shoot": {
+        "title": "Zdjęcia",
+        "text": "Na miejscu, ze sprzętem potrzebnym do zlecenia."
+      },
+      "deliver": {
+        "title": "Dostawa",
+        "text": "Gotowe pliki dostajesz w około 48-72 godziny, zależnie od zlecenia."
+      }
+    }
+  },
+  "about": {
+    "title": "O nas",
+    "lead": "Jesteśmy studiem foto i wideo działającym w Warszawie.",
+    "p1": "Pracujemy z markami, agencjami, restauracjami, właścicielami nieruchomości i osobami, które potrzebują obrazów z charakterem.",
+    "p2": "Proces świadomie trzymamy prosty. Jeden brief, jeden plan i gotowe pliki w około 48-72 godziny.",
+    "teamTitle": "Zespół",
+    "photoNote": "Portret zastępczy."
+  },
+  "contact": {
+    "title": "Umów rozmowę",
+    "text": "Opowiedz nam o sesji. Odpiszemy z terminem krótkiej rozmowy.",
+    "fields": {
+      "name": "Imię",
+      "email": "E-mail",
+      "shoot": "Rodzaj sesji",
+      "format": "Format",
+      "budget": "Budżet",
+      "day": "Preferowany dzień rozmowy",
+      "time": "Pora dnia",
+      "message": "Wiadomość (opcjonalnie)"
+    },
+    "hints": {
+      "budget": "Wystarczy przybliżony przedział.",
+      "time": "Godziny według czasu warszawskiego.",
+      "message": "Gdzie, kiedy i wszystko, co warto wiedzieć."
+    },
+    "options": {
+      "choose": "Wybierz",
+      "other": "Coś innego",
+      "formats": {
+        "photo": "Zdjęcia",
+        "video": "Wideo",
+        "both": "Oba"
+      },
+      "budgets": {
+        "under2k": "Poniżej 2 000 zł",
+        "2to5k": "2 000 - 5 000 zł",
+        "5to10k": "5 000 - 10 000 zł",
+        "over10k": "Powyżej 10 000 zł",
+        "unsure": "Jeszcze nie wiem"
+      },
+      "times": {
+        "morning": "Rano",
+        "afternoon": "Po południu",
+        "evening": "Wieczorem"
+      }
+    },
+    "submit": "Umów rozmowę",
+    "sending": "Wysyłanie",
+    "errors": {
+      "required": "To pole jest wymagane.",
+      "email": "Podaj poprawny adres e-mail.",
+      "choose": "Wybierz opcję.",
+      "send": "Nie udało się wysłać zgłoszenia. Napisz do nas na {email}.",
+      "rate": "Zbyt wiele prób. Spróbuj ponownie za kilka minut."
+    },
+    "success": {
+      "title": "Zgłoszenie wysłane",
+      "text": "Dziękujemy. Odpiszemy na {email} z terminem rozmowy.",
+      "again": "Wyślij kolejne zgłoszenie"
+    },
+    "direct": {
+      "title": "Wolisz napisać?",
+      "email": "E-mail",
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "about": "Studio foto i wideo",
+    "city": "Warszawa, Polska",
+    "top": "Do góry",
+    "rights": "Wszelkie prawa zastrzeżone."
+  },
+  "notFound": {
+    "title": "Nie znaleziono strony",
+    "text": "Strona, której szukasz, nie istnieje.",
+    "home": "Wróć na stronę główną"
+  }
+}

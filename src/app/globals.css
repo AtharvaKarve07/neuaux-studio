@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+/*
+ * neuaux.studio design tokens
+ * One theme: pure black, off-white text, a single burnt-orange accent.
+ * One shape rule: everything is sharp (radius 0). Nothing here is rounded.
+ */
+@theme {
+  --font-display: "Unbounded Variable", "Arial Black", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Onest Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-void: #000000;
+  --color-core: #070707;
+  --color-fg: #ecece9;
+  --color-mute: #9c9c98;
+  --color-line: rgb(255 255 255 / 0.12);
+  --color-line-strong: rgb(255 255 255 / 0.24);
+  --color-panel: rgb(255 255 255 / 0.04);
+  --color-accent: #e2632b;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+:root {
+  color-scheme: dark;
+
+  /* z-index scale, mirrored in src/lib/z.ts */
+  --z-menu: 30;
+  --z-nav: 40;
+  --z-viewer: 60;
+  --z-toast: 70;
+  --z-grain: 80;
+
+  --hero-scale: 1;
+}
+
+html {
+  background: var(--color-void);
+  color: var(--color-fg);
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 6rem;
+}
+
+/* Polish and Ukrainian words run longer, so the hero headline steps down a little. */
+html[lang="pl"],
+html[lang="uk"] {
+  --hero-scale: 0.9;
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--color-void);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #000;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Static film grain. One fixed, non-interactive layer, never on a scrolling container. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-grain);
+  pointer-events: none;
+  opacity: 0.09;
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  1.4 0 0 0 -.42'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 220px 220px;
+}
+
+/* Frosted surface for fixed elements only (nav, menu). */
+.glass {
+  background: rgb(0 0 0 / 0.62);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(140%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.07);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    background: #000;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* Hero headline size, planned together with the logo mark. */
+.hero-title {
+  font-size: calc(clamp(1.85rem, 7.6vw, 2.9rem) * var(--hero-scale));
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: calc(clamp(2.4rem, 4.4vw, 4.1rem) * var(--hero-scale));
+  }
+}
+
+/* Hero entrance: CSS keyframes so it runs before hydration and off the main thread. */
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-in {
+  animation: hero-rise 600ms var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 70ms + 60ms);
+}
+
+.hero-static .hero-in {
+  animation: none;
+}
+
+/* Language switch: body fades in once. */
+.locale-in {
+  animation: fade-in 260ms var(--ease-out) both;
+}
+
+/* Video scrubber */
+.scrub {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  background: transparent;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.scrub::-webkit-slider-runnable-track {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-fg) var(--progress, 0%),
+    rgb(255 255 255 / 0.28) var(--progress, 0%)
+  );
+}
+
+.scrub::-moz-range-track {
+  height: 2px;
+  background: rgb(255 255 255 / 0.28);
+}
+
+.scrub::-moz-range-progress {
+  height: 2px;
+  background: var(--color-fg);
+}
+
+.scrub::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  margin-top: -5px;
+  background: var(--color-accent);
+  border: 0;
+  border-radius: 0;
+}
+
+.scrub::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: var(--color-accent);
+  border: 0;
+  border-radius: 0;
+}
+
+/* Lenis smooth scroll (desktop wheel only, touch stays native) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+/* Toasts sit on their own layer and follow the sharp shape rule. */
+[data-sonner-toaster] {
+  --border-radius: 0px;
+  z-index: var(--z-toast) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .locale-in {
+    animation: none;
+  }
+
+  .hero-in {
+    animation: fade-in 200ms ease both;
+    animation-delay: 0ms;
+  }
+}
